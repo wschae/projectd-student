@@ -9,14 +9,10 @@ contract Student {
         firstName = fname;
         lastName = lname;
         dateOfBirth = dob;
-        
-        emit Added(fname, lname, dob);
     }
    
     function getStudent() 
         public view returns (string memory, string memory, string memory) {
         return (firstName, lastName, dateOfBirth);
     }
-    
-    event Added(string indexed, string, string);
 }
